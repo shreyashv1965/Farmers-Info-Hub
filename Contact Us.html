@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="farmers styles.css">
+    <style>
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons img {
+            width: 40px;
+            height: auto;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="Image Gallery.html">Image Gallery</a></li>
+            <li><a href="Farming Techniques.html">Farming Techniques</a></li>
+            <li><a href="Modern Farming Tools.html">Modern Farming Tools</a></li>
+            <li><a href="Challenges in Farming.html">Challenges in Agriculture</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Contact Information -->
+    <div class="contact-section">
+        <p>We would love to hear from you! Please reach out to us using the information below:</p>
+
+        <h2>Phone</h2>
+        <p>+91 123-456-7890</p>
+
+        <h2>Email</h2>
+        <p><a href="mailto:info@organicfarminghub.com">info@organicfarminghub.com</a></p>
+
+        <h2>Address</h2>
+        <p>Organic Farming Hub, Karad, Maharashtra, India</p>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contactForm">
+        <h2>Send Us a Message</h2>
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required style="width: 100%; height: 40px; box-sizing: border-box;">
+        <br><br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required style="width: 100%; height: 40px; box-sizing: border-box;">
+        <br><br>
+        <label for="message">Message:</label>
+        <br>
+        <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required style="width: 100%; box-sizing: border-box;"></textarea>
+        <br><br>
+        <button type="submit" style="width: 100%; height: 40px; box-sizing: border-box;">Submit</button>
+    </form>
+
+    <!-- Social Media Links -->
+    <div class="social-icons">
+        <h2>Follow Us on Social Media</h2>
+        <a href="https://facebook.com" target="_blank" title="Visit our Facebook page">
+            <img src="facebook-logo.jpg" alt="Facebook Icon">
+        </a>
+        <a href="https://instagram.com" target="_blank" title="Visit our Instagram profile">
+            <img src="instagram logo.jpeg" alt="Instagram Icon">
+        </a>
+        <a href="https://twitter.com" target="_blank" title="Visit our Twitter handle">
+            <img src="twitter.jpg" alt="Twitter Icon">
+        </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Farmers Info Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Handle form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for contacting Farmers Info Hub!");
+        });
+    </script>
+</body>
+</html>
