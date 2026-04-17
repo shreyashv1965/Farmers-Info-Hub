@@ -11,6 +11,13 @@
     section { padding: 20px; }
     footer { background: #f1f1f1; text-align: center; padding: 10px; margin-top: 20px; }
 
+    /* Slideshow styling */
+    .slideshow-container { max-width: 1000px; position: relative; margin: auto; }
+    .slides { display: none; }
+    .slides img { width: 100%; height: auto; }
+    .fade { animation: fade 1.5s; }
+    @keyframes fade { from {opacity: .4} to {opacity: 1} }
+
     /* Search section styling */
     #search { margin-top: 30px; }
     #searchBox { padding: 8px; width: 300px; }
@@ -29,11 +36,24 @@
     <a href="#">Contact</a>
   </nav>
 
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slides fade">
+      <img src="images/farming1.jpg" alt="Farming Image 1">
+    </div>
+    <div class="slides fade">
+      <img src="images/farming2.jpg" alt="Farming Image 2">
+    </div>
+    <div class="slides fade">
+      <img src="images/farming3.jpg" alt="Farming Image 3">
+    </div>
+  </div>
+
   <section>
     <h2>Welcome</h2>
     <p>This hub provides resources and insights for farmers to adopt modern techniques and sustainable practices.</p>
 
-    <!-- 🔹 Search Section added here -->
+    <!-- 🔹 Search Section -->
     <section id="search">
       <h2>Search Farmers Info Hub</h2>
       <input type="text" id="searchBox" placeholder="Type to search...">
@@ -45,7 +65,25 @@
     <p>&copy; 2026 Farmers Info Hub</p>
   </footer>
 
-  <!-- 🔹 Search Script -->
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+
+  <!-- Search Script -->
   <script>
     const data = [
       "Organic farming",
