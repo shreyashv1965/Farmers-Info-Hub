@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search | Farmers Info Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Farmers Info Hub</h1>
+  <form action="https://www.google.com/search" method="get">
+    <!-- 'q' is the query parameter Google uses -->
+    <input type="text" name="q" placeholder="Search..." required>
+    <!-- Restrict search to your site -->
+    <input type="hidden" name="sitesearch" value="shreyashv1965.github.io/Farmers-Info-Hub">
+    <input type="submit" value="Search">
+  </form>
+</body>
+</html>
