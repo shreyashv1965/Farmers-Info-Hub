@@ -1,5 +1,8 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/shreyashv1965/Farmers-Info-Hub/main/armers-info-hub-banner.png" alt="Farmers Info Hub Banner" width="1200"/>
+  ## 🌐 Live Demo
+Check out the project here: [Farmers Info Hub](https://shreyashv1965.github.io/Farmers-Info-Hub/)
+
 </p>
 
 
