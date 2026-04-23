@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Farmers Info Hub - Explore Modern Agriculture</title>
 
-  <link rel="icon" type="image/x-icon" href="logo.jpg" />
-  <link rel="stylesheet" href="farmers styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="logo.jpg">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="farmers styles.css">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-
-    /* Search section */
+    /* Search Section Styling */
     #search-section {
       text-align: center;
       margin: 40px 20px;
@@ -27,9 +25,28 @@
     }
 
     #searchBtn {
-      padding: 8px 14px;
+      padding: 8px 16px;
       font-size: 16px;
       cursor: pointer;
+      margin-left: 4px;
+    }
+
+    #suggestions {
+      list-style: none;
+      padding: 0;
+      margin: 10px auto;
+      width: 260px;
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+
+    #suggestions li {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    #suggestions li:hover {
+      background: #ddd;
     }
 
     #results a {
@@ -40,12 +57,17 @@
       text-decoration: none;
     }
 
+    mark {
+      background: yellow;
+      font-weight: bold;
+    }
+
     footer {
       background: #222;
       color: #fff;
       text-align: center;
       padding: 15px;
-      margin-top: 40px;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -58,58 +80,52 @@
     <p>Empowering farmers with sustainable and modern agriculture knowledge.</p>
   </header>
 
-  <!-- Navbar -->
-  <nav style="display:flex; align-items:center; padding:10px;">
-    <img src="logo.jpg" alt="Logo" style="height:45px; margin-right:15px;">
-    <ul style="list-style:none; display:flex; gap:15px; margin:0; padding:0;">
-      <li><a href="Image Gallery.html">Image Gallery</a></li>
-      <li><a href="Farming Techniques.html">Farming Techniques</a></li>
-      <li><a href="Modern Farming Tools.html">Modern Farming Tools</a></li>
-      <li><a href="Challenges in Farming.html">Challenges</a></li>
-      <li><a href="Contact Us.html">Contact</a></li>
-      <li><a href="#search-section">🔍 Search</a></li>
-    </ul>
+  <!-- Navigation -->
+  <nav style="display:flex; align-items:center; gap:15px; padding:10px;">
+    <img src="logo.jpg" alt="Farmers Info Hub Logo" height="40">
+    <a href="index.html">Home</a>
+    <a href="Image Gallery.html">Image Gallery</a>
+    <a href="Farming Techniques.html">Farming Techniques</a>
+    <a href="Modern Farming Tools.html">Modern Farming Tools</a>
+    <a href="Challenges in Farming.html">Challenges</a>
+    <a href="Contact Us.html">Contact</a>
+    <a href="#search-section">🔍 Search</a>
   </nav>
 
   <main>
 
-    <!-- Slideshow -->
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="agri drone.jpg" style="width:100%">
-        <div class="text">Drone surveying farmland</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="tractor plowing the fields.jpeg" style="width:100%">
-        <div class="text">Modern tractor plowing</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="biofertilizers.jpg" style="width:100%">
-        <div class="text">Using biofertilizers</div>
-      </div>
-    </div>
-
-    <br />
-    <div style="text-align:center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-    <!-- ✅ WEBSITE‑ONLY SEARCH -->
+    <!-- ✅ SEARCH SECTION -->
     <section id="search-section">
       <h2>Search Farmers Info Hub</h2>
 
-      <input type="text" id="searchInput" placeholder="Search website..." />
-      <button id="searchBtn">Search</button>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search website..."
+        onkeyup="autoSuggest(this.value.toLowerCase())"
+      >
 
+      <button
+        id="searchBtn"
+        onclick="runSearch(document.getElementById('searchInput').value.toLowerCase())"
+      >
+        Search
+      </button>
+
+      <!-- Auto-suggestions -->
+      <ul id="suggestions"></ul>
+
+      <!-- Results -->
       <div id="results"></div>
+    </section>
+
+    <!-- Example content section -->
+    <section>
+      <h2>Welcome</h2>
+      <p>
+        Farmers Info Hub provides information on modern farming techniques,
+        tools, sustainability, and agriculture challenges.
+      </p>
     </section>
 
   </main>
@@ -123,73 +139,8 @@
     </p>
   </footer>
 
-  <!-- Slideshow Script -->
-  <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      slideIndex++;
-      if (slideIndex > slides.length) slideIndex = 1;
-
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-
-      setTimeout(showSlides, 2000);
-    }
-  </script>
-
-  <!-- ✅ SEARCH SCRIPT (FIXED & WORKING) -->
-  <script>
-    const sitePages = [
-      { title: "Home", url: "index.html", keywords: "home farmers agriculture" },
-      { title: "Farming Techniques", url: "Farming Techniques.html", keywords: "farming techniques modern" },
-      { title: "Image Gallery", url: "Image Gallery.html", keywords: "gallery images photos" },
-      { title: "Modern Farming Tools", url: "Modern Farming Tools.html", keywords: "tools machinery equipment" },
-      { title: "Challenges in Agriculture", url: "Challenges in Farming.html", keywords: "challenges agriculture problems" },
-      { title: "Contact Us", url: "Contact Us.html", keywords: "contact farmers hub" }
-    ];
-
-    document.getElementById("searchBtn").addEventListener("click", function () {
-      const query = document.getElementById("searchInput").value.toLowerCase();
-      const results = document.getElementById("results");
-      results.innerHTML = "";
-
-      if (!query) {
-        results.innerHTML = "<p>Please enter a search term.</p>";
-        return;
-      }
-
-      const matches = sitePages.filter(page =>
-        page.title.toLowerCase().includes(query) ||
-        page.keywords.includes(query)
-      );
-
-      if (matches.length === 0) {
-        results.innerHTML = "<p>No results found on this website.</p>";
-        return;
-      }
-
-      matches.forEach(page => {
-        const link = document.createElement("a");
-        link.href = page.url;
-        link.textContent = page.title;
-        results.appendChild(link);
-      });
-    });
-  </script>
+  <!-- ✅ SEARCH SCRIPT (USED BY ALL PAGES) -->
+  <script src="search.js"></script>
 
 </body>
 </html>
