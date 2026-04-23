@@ -265,3 +265,23 @@ footer {
   }
 }
 
+/* ===== FINAL NAV HOVER EFFECT (OVERRIDE) ===== */
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none !important;
+  color: #2c3e50 !important;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.25);
+  background-color: #f3e5ab;
+  color: #5d4037 !important;
+}
