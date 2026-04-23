@@ -37,10 +37,9 @@ p {
 nav {
   width: 100%;
   padding: 18px 0;
-  background: rgba(0, 0, 0, 0.02); /* subtle full-width visibility */
+  background: rgba(0, 0, 0, 0.02);
 }
 
-/* Layout */
 nav ul {
   width: 100%;
   max-width: 1200px;
@@ -49,7 +48,7 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 25px; /* increased spacing */
   padding: 0;
 }
 
@@ -58,25 +57,22 @@ nav ul li img {
   height: 40px;
 }
 
-/* ALL navigation links */
+/* Links */
 nav ul li a {
-  display: inline-block;
-  text-decoration: none !important;
-  color: #2c3e50 !important;
+  display: block; /* FIX: better than inline-block */
+  text-decoration: none;
+  color: #2c3e50;
   font-weight: 600;
-  padding: 8px 18px;
-  border-radius: 22px;
-  transition:
-    transform 0.25s ease,
-    background-color 0.25s ease,
-    color 0.25s ease;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-/* Hover effect */
+/* Hover FIXED */
 nav ul li a:hover {
-  transform: scale(1.25);
+  transform: scale(1.1); /* REDUCED from 1.25 */
   background-color: #f3e5ab;
-  color: #5d4037 !important;
+  color: #5d4037;
 }
 
 /* =====================
