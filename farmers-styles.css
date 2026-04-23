@@ -31,20 +31,23 @@ p {
 }
 
 /* =====================
-   NAVIGATION – ALL TOOLS
-   Hover + Zoom (NO GREEN)
+   NAVIGATION – FINAL FIX
+   Full width + Hover Zoom
 ===================== */
 
 nav {
-  padding: 10px 20px;
+  width: 100%;
+  padding: 14px 0;
 }
 
 /* Layout */
 nav ul {
+  width: 100%;
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 14px;
   margin: 0;
   padding: 0;
 }
@@ -58,22 +61,23 @@ nav ul li img {
 nav ul li a {
   display: inline-block;
   text-decoration: none;
-  color: #2c3e50;        /* Dark slate */
+  color: #2c3e50;
   font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 20px;
+  padding: 8px 16px;
+  border-radius: 22px;
   transition:
     transform 0.25s ease,
     background-color 0.25s ease,
     color 0.25s ease;
 }
 
-/* ✅ Hover effect on ALL tools */
+/* ✅ Hover zoom effect */
 nav ul li a:hover {
-  transform: scale(1.25);          /* GROW on hover */
-  background-color: #f3e5ab;       /* Soft beige */
-  color: #5d4037;                  /* Earth brown */
+  transform: scale(1.25);
+  background-color: #f3e5ab;
+  color: #5d4037;
 }
+
 /* =====================
    SCROLL IMAGE GALLERY
 ===================== */
@@ -148,8 +152,7 @@ nav ul li a:hover {
 }
 
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation: fade 1.5s;
 }
 
 @keyframes fade {
@@ -249,39 +252,4 @@ footer {
 
 #back-to-top:hover {
   background-color: #ff6600;
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 600px) {
-  .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navbar a {
-    margin-top: 5px;
-  }
-}
-
-/* ===== FINAL NAV HOVER EFFECT (OVERRIDE) ===== */
-
-nav ul li a {
-  display: inline-block;
-  text-decoration: none !important;
-  color: #2c3e50 !important;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 20px;
-  transition:
-    transform 0.25s ease,
-    background-color 0.25s ease,
-    color 0.25s ease;
-}
-
-nav ul li a:hover {
-  transform: scale(1.25);
-  background-color: #f3e5ab;
-  color: #5d4037 !important;
 }
