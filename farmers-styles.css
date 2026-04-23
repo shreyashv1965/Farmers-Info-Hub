@@ -31,21 +31,32 @@ p {
 }
 
 /* =====================
-   NAVIGATION BAR
+   NAVIGATION 
 ===================== */
-.navbar {
+
+nav {
+  background-color: #aed581;
+  padding: 12px 20px;
+}
+
+nav ul {
+  list-style: none;
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 12px 20px;
-  background-color: #aed581;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar img {
+nav ul li {
+  margin: 0;
+}
+
+nav ul li img {
   height: 40px;
 }
 
-.navbar a {
+nav ul li a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
@@ -54,7 +65,7 @@ p {
   transition: background-color 0.3s ease;
 }
 
-.navbar a:hover {
+nav ul li a:hover {
   background-color: #7cb342;
 }
 /* =====================
