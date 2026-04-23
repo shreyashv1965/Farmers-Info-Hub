@@ -248,3 +248,6 @@ footer {
     margin-top: 5px;
   }
 }
+body {
+  border: 8px solid green;
+}
