@@ -31,19 +31,20 @@ p {
 }
 
 /* =====================
-   NAVIGATION – ITEM ONLY
+   NAVIGATION – ALL TOOLS
+   Hover + Zoom (NO GREEN)
 ===================== */
 
 nav {
   padding: 10px 20px;
 }
 
-/* UL layout */
+/* Layout */
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin: 0;
   padding: 0;
 }
@@ -53,20 +54,25 @@ nav ul li img {
   height: 40px;
 }
 
-/* Navigation links */
+/* ✅ ALL navigation tools */
 nav ul li a {
+  display: inline-block;
   text-decoration: none;
-  color: #2e7d32;
-  font-weight: bold;
-  padding: 6px 12px;
+  color: #2c3e50;        /* Dark slate */
+  font-weight: 600;
+  padding: 6px 14px;
   border-radius: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
-/* Hover effect ONLY on links */
+/* ✅ Hover effect on ALL tools */
 nav ul li a:hover {
-  background-color: #aed581;
-  color: #1b5e20;
+  transform: scale(1.25);          /* GROW on hover */
+  background-color: #f3e5ab;       /* Soft beige */
+  color: #5d4037;                  /* Earth brown */
 }
 /* =====================
    SCROLL IMAGE GALLERY
