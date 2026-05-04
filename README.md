@@ -47,7 +47,9 @@ The objective of Farmers Info Hub is to create a simple yet informative platform
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="vertical_farming.jpg" alt="Vertical Farming" width="600"/>
+ <img src="https://raw.githubusercontent.com/shreyashv1965/Farmers-Info-Hub/main/vertical_farming.jpg"
+     alt="Vertical Farming"
+     width="600"/>
 </p>
 
 ---
