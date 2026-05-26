@@ -3,146 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farming Techniques</title>
+  <title>Farming Techniques - Farmers Info Hub</title>
 
+  <!-- 🚀 Google Fonts Link (Poppins) -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS Stylesheet Link -->
   <link rel="stylesheet" href="farmers-styles.css">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 20px;
-      color: #333;
-      text-shadow: 2px 2px #ccc;
-    }
-
-    h2 {
-      text-align: center;
-      margin-top: 35px;
-      color: #555;
-    }
-
+    /* Unique layout additions just for the Techniques page formatting */
     ul {
       list-style: none;
       padding: 0;
       margin: 20px auto;
-      width: 85%;
+      width: 90%;
+      max-width: 800px;
     }
 
     li {
       background: #ffffff;
-      margin-bottom: 25px;
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease;
+    }
+
+    li:hover {
+      transform: translateY(-2px); /* Slight interactive elevation bump */
+    }
+
+    li strong {
+      display: block;
+      font-size: 1.15rem;
+      color: #2e7d32;
+      margin-bottom: 8px;
     }
 
     img {
       display: block;
-      margin: 12px auto;
-      width: 600px;
-      max-width: 100%;
-      border-radius: 10px;
-      border: 2px solid #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #1a1a2e;
-      color: #ffffff;
-      font-size: 0.9rem;
-      margin-top: 40px;
+      margin: 15px auto 5px auto;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
   </style>
 </head>
 
 <body>
 
-<h1>Farming Techniques</h1>
+  <!-- Page Header Title -->
+  <header style="text-align: center; padding: 20px 0;">
+    <h1>Farming Techniques</h1>
+    <p>Discover traditional, organic, and modern methods powering global agriculture.</p>
+  </header>
 
   <!-- ================= INDIAN FARMING ================= -->
-<h2>1. 🇮🇳 Indian Farming Techniques</h2>
-<ul>
-  <li>
-    <strong>Rice Paddy Cultivation:</strong> Flooded‑field rice cultivation.
-    <img src="images/indian_rice_farming.jpg" alt="Rice farming in India">
-  </li>
+  <h2>1. 🇮🇳 Indian Farming Techniques</h2>
+  <ul>
+    <li>
+      <strong>Rice Paddy Cultivation:</strong> Flooded‑field rice cultivation.
+      <img src="images/indian_rice_farming.jpg" alt="Rice farming in India">
+    </li>
 
-  <li>
-    <strong>Wheat Farming:</strong> Major Rabi crop in northern India.
-    <img src="images/wheat_farming_india.jpg" alt="Wheat farming in India">
-  </li>
- <li>
-    <strong>Indian Farmer Practices:</strong> Combination of traditional and modern methods.
-  <img src="images/indian_farmer_field.jpg" alt="Indian farmer practices combining traditional farming with modern agricultural methods">
-  </li>
-  <li>
-    <strong>Modern Irrigation Practices: </strong></strong>Controlled Water Supply through Pipes for Better Crop Growth
-    <img src="images/indian_irrigation_farming.jpg" alt="Irrigation in Indian farming">
-  </li>
+    <li>
+      <strong>Wheat Farming:</strong> Major Rabi crop in northern India.
+      <img src="images/wheat_farming_india.jpg" alt="Wheat farming in India">
+    </li>
 
-  <li>
-    <strong>Organic Farming in India:</strong> Eco‑friendly agricultural approach.
-    <img src="images/organic_farming_india.jpg" alt="Organic farming in India">
-  </li>
+    <li>
+      <strong>Indian Farmer Practices:</strong> Combination of traditional and modern methods.
+      <img src="images/indian_farmer_field.jpg" alt="Indian farmer practices combining traditional farming with modern agricultural methods">
+    </li>
 
-  <li>
-    <strong>Ginger Farming:</strong> Important spice crop grown in India.
-    <img src="images/ginger_farming_india.jpg" alt="Ginger farming in India">
-  </li>
-  
-</ul>
+    <li>
+      <strong>Modern Irrigation Practices:</strong> Controlled Water Supply through Pipes for Better Crop Growth.
+      <img src="images/indian_irrigation_farming.jpg" alt="Irrigation in Indian farming">
+    </li>
 
+    <li>
+      <strong>Organic Farming in India:</strong> Eco‑friendly agricultural approach.
+      <img src="images/organic_farming_india.jpg" alt="Organic farming in India">
+    </li>
 
-<!-- ================= ORGANIC FARMING ================= -->
-<h2>2. Organic Farming Techniques</h2>
-<ul>
-  <li>
-    <strong>Crop Rotation:</strong> Alternating crops to improve soil fertility.
-    <img src="images/crop_rotation.png" alt="Crop rotation farming">
-  </li>
+    <li>
+      <strong>Ginger Farming:</strong> Important spice crop grown in India.
+      <img src="images/ginger_farming_india.jpg" alt="Ginger farming in India">
+    </li>
+  </ul>
 
-  <li>
-    <strong>Green Manure:</strong> Growing plants to enrich soil nutrients naturally.
-    <img src="images/green_manure.png" alt="Green manure crops">
-  </li>
+  <!-- ================= ORGANIC FARMING ================= -->
+  <h2>2. Organic Farming Techniques</h2>
+  <ul>
+    <li>
+      <strong>Crop Rotation:</strong> Alternating crops to improve soil fertility.
+      <img src="images/crop_rotation.png" alt="Crop rotation farming">
+    </li>
 
-  <li>
-    <strong>Biofertilizers:</strong> Natural microorganisms improving soil health.
-    <img src="images/biofertilizers.jpg" alt="Biofertilizers in farming">
-  </li>
+    <li>
+      <strong>Green Manure:</strong> Growing plants to enrich soil nutrients naturally.
+      <img src="images/green_manure.png" alt="Green manure crops">
+    </li>
 
-  <li>
-    <strong>Composting:</strong> Recycling organic waste into nutrient‑rich manure.
-    <img src="images/composting.png" alt="Composting process">
-  </li>
-</ul>
+    <li>
+      <strong>Biofertilizers:</strong> Natural microorganisms improving soil health.
+      <img src="images/biofertilizers.jpg" alt="Biofertilizers in farming">
+    </li>
 
-<!-- ================= TRADITIONAL FARMING ================= -->
-<h2>3. Traditional Farming Techniques</h2>
-<ul>
-  <li>
-    <strong>Mixed Farming:</strong> Crops and livestock managed together.
-    <img src="images/mixed_farming.jpg" alt="Mixed farming practices">
-  </li>
+    <li>
+      <strong>Composting:</strong> Recycling organic waste into nutrient‑rich manure.
+      <img src="images/composting.png" alt="Composting process">
+    </li>
+  </ul>
 
-  <li>
-    <strong>Terrace Farming:</strong> Step‑wise farming on hills to reduce erosion.
-    <img src="images/terrace_farming.jpg" alt="Terrace farming">
-  </li>
+  <!-- ================= TRADITIONAL FARMING ================= -->
+  <h2>3. Traditional Farming Techniques</h2>
+  <ul>
+    <li>
+      <strong>Mixed Farming:</strong> Crops and livestock managed together.
+      <img src="images/mixed_farming.jpg" alt="Mixed farming practices">
+    </li>
 
-  <li>
-    <strong>Manual Farming:</strong> Farming using traditional tools and labor.
-    <img src="images/manual_farming.jpg" alt="Manual farming">
-  </li>
-</ul>
+    <li>
+      <strong>Terrace Farming:</strong> Step‑wise farming on hills to reduce erosion.
+      <img src="images/terrace_farming.jpg" alt="Terrace farming">
+    </li>
 
+    <li>
+      <strong>Manual Farming:</strong> Farming using traditional tools and labor.
+      <img src="images/manual_farming.jpg" alt="Manual farming">
+    </li>
+  </ul>
 
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2025 Farmers Info Hub |
+      Created & Maintained by Shreyash Vibhute |
+      Licensed under the MIT License
+    </p>
+  </footer>
+
+</body>
+</html>
