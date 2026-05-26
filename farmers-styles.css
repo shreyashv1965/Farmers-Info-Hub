@@ -3,41 +3,49 @@
 ===================== */
 * {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* 🚀 Upgraded to modern Google Font */
+}
+
+html {
+  scroll-behavior: smooth; /* 💨 Enabled buttery smooth scrolling globally */
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f8f9fa; /* Slightly softer modern white/grey */
   margin: 0;
   padding: 0;
+  color: #333333;
 }
 
 h1 {
   text-align: center;
-  color: #2e7d32;
-  margin-top: 20px;
+  color: #2e7d32; /* Rich Forest Green */
+  margin-top: 30px;
+  font-weight: 700;
 }
 
 h2 {
   text-align: center;
-  color: #4a4a4a;
-  margin-top: 20px;
+  color: #2e7d32; /* Keeping headings cohesive */
+  margin-top: 30px;
+  font-weight: 600;
 }
 
 p {
   text-align: center;
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.6;
 }
 
 /* =====================
-   NAVIGATION (FINAL)
+   NAVIGATION (UPDATED UI)
 ===================== */
-
 nav {
   width: 100%;
-  padding: 18px 0;
-  background: rgba(0, 0, 0, 0.02);
+  padding: 12px 0;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Clean border shadow drop */
 }
 
 nav ul {
@@ -48,31 +56,33 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 25px; /* increased spacing */
+  gap: 20px;
   padding: 0;
 }
 
-/* Logo */
+/* Logo styling inside standard list flow */
 nav ul li img {
   height: 40px;
+  display: block;
 }
 
-/* Links */
+/* Updated Links Style */
 nav ul li a {
-  display: block; /* FIX: better than inline-block */
+  display: block;
   text-decoration: none;
-  color: #2c3e50;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border-radius: 6px; /* Modern square-round finish */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Hover FIXED */
+/* Professional Agro Theme Hover Animation */
 nav ul li a:hover {
-  transform: scale(1.1); /* REDUCED from 1.25 */
-  background-color: #f3e5ab;
-  color: #5d4037;
+  transform: translateY(-2px); /* Lift animation instead of rigid scaling */
+  background-color: #e8f5e9;   /* Soft organic green tint */
+  color: #2e7d32;              /* Forest green highlights */
 }
 
 /* =====================
@@ -83,24 +93,31 @@ nav ul li a:hover {
   overflow-x: auto;
   scroll-behavior: smooth;
   white-space: nowrap;
+  padding: 15px;
+  gap: 15px;
 }
 
 .image-caption {
   text-align: center;
-  margin-right: 10px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .image-caption img {
   width: 300px;
-  height: auto;
+  height: 200px;
+  object-fit: cover; /* Keeps image ratios locked perfectly */
+  border-radius: 6px;
   display: block;
   margin: 0 auto;
 }
 
 .image-caption p {
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 14px;
-  color: #555;
+  color: #666666;
 }
 
 /* =====================
@@ -111,49 +128,56 @@ nav ul li a:hover {
 }
 
 .slideshow-container {
-  max-width: 100%;
+  max-width: 1000px; /* Centered bounding layout wrapper box */
   position: relative;
-  margin: auto;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px;
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   width: 100%;
   text-align: center;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7)); /* Overlay readability shading gradient */
 }
 
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
-  padding: 8px 12px;
+  padding: 12px;
   position: absolute;
   top: 0;
+  background: rgba(0,0,0,0.3);
+  border-radius: 0 0 8px 0;
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .active {
-  background-color: #717171;
+  background-color: #2e7d32; /* Connected slide visual dot highlights */
 }
 
 .fade {
-  animation: fade 1.5s;
+  animation: fade 1.5s ease-in-out;
 }
 
 @keyframes fade {
-  from { opacity: 0.4; }
+  from { opacity: 0.6; }
   to { opacity: 1; }
 }
 
@@ -161,61 +185,76 @@ nav ul li a:hover {
    CASE STUDY / CARDS
 ===================== */
 .case-study {
-  margin: 20px auto;
-  padding: 20px;
-  width: 80%;
-  border: 2px solid #aed581;
-  border-radius: 10px;
+  margin: 30px auto;
+  padding: 25px;
+  width: 85%;
+  max-width: 800px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
   background-color: #ffffff;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .case-study:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* =====================
-   CONTACT PAGE
+   CONTACT PAGE & FORMS
 ===================== */
 .contact-section {
-  margin: auto;
-  padding: 20px;
-  width: 80%;
-  border: 2px solid #6699cc;
-  border-radius: 10px;
+  margin: 30px auto;
+  padding: 25px;
+  width: 85%;
+  max-width: 600px;
+  border-radius: 12px;
   background-color: #ffffff;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 form {
   margin: 20px auto;
   text-align: center;
-  padding: 20px;
-  border: 2px solid #6699cc;
-  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
   background-color: #ffffff;
-  width: 80%;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
 }
 
 form input,
+form textarea,
 form button {
-  margin: 10px 0;
-  padding: 10px;
-  width: 80%;
-  border: 2px solid #6699cc;
-  border-radius: 5px;
+  margin: 12px 0;
+  padding: 12px;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #2e7d32; /* Green input highlight focus focus borders */
 }
 
 form button {
-  background-color: #003366;
+  background-color: #2e7d32;
   color: #ffffff;
+  border: none;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 form button:hover {
-  background-color: #002244;
+  background-color: #1b5e20;
 }
 
 /* =====================
@@ -223,11 +262,11 @@ form button:hover {
 ===================== */
 footer {
   text-align: center;
-  padding: 15px;
-  background-color: #17171c;
-  color: #ffffff;
-  font-size: 0.9rem;
-  margin-top: 40px;
+  padding: 20px;
+  background-color: #1e251f; /* Elegant warm off-black matrix gray tint */
+  color: #aeaeae;
+  font-size: 0.85rem;
+  margin-top: 60px;
 }
 
 /* =====================
@@ -235,9 +274,9 @@ footer {
 ===================== */
 #back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #003366;
+  bottom: 25px;
+  right: 25px;
+  background-color: #2e7d32;
   color: white;
   border: none;
   border-radius: 50%;
@@ -245,8 +284,10 @@ footer {
   font-size: 20px;
   cursor: pointer;
   display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
 }
 
 #back-to-top:hover {
-  background-color: #ff6600;
+  background-color: #1b5e20;
 }
