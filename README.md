@@ -58,7 +58,7 @@ Farmers-Info-Hub/
 ## 📸 Project Screenshots
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/shreyashv1965/Farmers-Info-Hub/main/vertical_farming.jpg"
+ <img src="https://github.com/shreyashv1965/Farmers-Info-Hub/blob/main/images/vertical_farming.jpg"
      alt="Vertical Farming Showcase"
      width="600"/>
 </p>
