@@ -3,63 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Farming Tools</title>
-    <link rel="icon" type="image/png" href="farmers-info-hub-banner.png?v=3">
 
+    <title>Modern Farming Tools</title>
+
+    <link rel="icon" type="image/png" href="farmers-info-hub-banner.png">
+
+    <!-- ✅ Main CSS -->
     <link rel="stylesheet" href="farmers-styles.css">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Light grey background for the page */
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
+
+        /* ✅ GREEN HEADER like Image Gallery */
         h1 {
             text-align: center;
-            color: #003366; /* Deep blue for title */
+            color: white;
+            background-color: #2e7d32;
+            padding: 15px;
+            margin: 0;
             text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4a4a4a;
             margin-top: 20px;
         }
-        h2 {
-            color: #4a4a4a; /* Neutral text color */
-            margin: 20px auto;
-            text-align: center;
-        }
+
         p {
             text-align: center;
-            font-size: 1.1rem;
             color: #555;
-            margin: 10px auto;
         }
-        img {
+
+        /* ✅ IMPORTANT: Only content images */
+        main img {
             display: block;
             margin: 10px auto;
-            width: 400px; /* Consistent width for all images */
-            height: auto; /* Maintain image aspect ratio */
-            border: 2px solid #ccc; /* Subtle border around images */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow effect for depth */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+            width: 400px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
-        img:hover {
-            transform: scale(1.05); /* Slight zoom on hover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepened shadow effect on hover */
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #1a1a2e; /* Dark navy blue for footer background */
-            color: #ffffff; /* White text for clear readability */
-            font-size: 0.9rem;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+
+        main img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
-    <script src="search.js"></script>
+
 <body>
-    <h1>Modern Farming Tools</h1>
-        <!-- Navigation Section [navbar]-->
-       <nav class="navbar">
+
+<h1>Modern Farming Tools</h1>
+
+<!-- ✅ NAVBAR (SAME AS IMAGE GALLERY) -->
+<nav class="navbar">
   <img src="farmers-info-hub-banner.png" alt="Logo" class="logo">
 
   <div class="nav-links">
@@ -70,36 +73,44 @@
     <a href="Challenges in Farming.html">Challenges</a>
     <a href="Contact Us.html">Contact</a>
   </div>
-</nav>  
-        <!-- Navigation Section [navbar] End...-->
-    <h2>1. Tractors</h2>
-    <p>Versatile machines used for plowing, planting, and harvesting crops efficiently.</p>
-    <img src="tractor plowing the fields.jpeg" alt="Tractor in a field">
+</nav>
 
-    <h2>2. Drones</h2>
-    <p>Unmanned aerial vehicles employed for crop monitoring, irrigation, and pesticide application.</p>
-    <img src="agri drone.jpg" alt="Drone used in farming">
+<!-- ✅ MAIN CONTENT -->
+<main>
 
-    <h2>3. Irrigation Systems</h2>
-    <p>Automated systems such as drip or sprinkler irrigation to optimize water usage.</p>
-    <img src="irrigation.png" alt="Irrigation system in a farm">
+<h2>1. Tractors</h2>
+<p>Versatile machines used for plowing, planting, and harvesting crops efficiently.</p>
+<img src="tractor plowing the fields.jpeg" alt="Tractor">
 
-    <h2>4. Precision Agriculture Tools</h2>
-    <p>GPS-based tools and sensors to monitor soil, weather, and crop conditions.</p>
-    <img src="soil temperature moisture sensor.jpg" alt="Precision agriculture tools" width="400">
+<h2>2. Drones</h2>
+<p>Unmanned aerial vehicles used for crop monitoring and spraying.</p>
+<img src="agri drone.jpg" alt="Drone">
 
-    <h2>5. Combine Harvesters</h2>
-    <p>Machines designed to perform multiple harvesting functions like reaping, threshing, and winnowing.</p>
-    <img src="combine harvestor.jpg" alt="Combine harvester in action">
+<h2>3. Irrigation Systems</h2>
+<p>Automated systems such as drip or sprinkler irrigation for water optimization.</p>
+<img src="irrigation.png" alt="Irrigation">
 
-    <!-- Footer Section -->
-    <!-- Footer -->
-  <footer>
-    <p>
-      © 2025 Farmers Info Hub |
-      Created & Maintained by Shreyash Vibhute |
-      Licensed under the MIT License
-    </p>
-  </footer>
+<h2>4. Precision Agriculture Tools</h2>
+<p>GPS tools and sensors to monitor farm conditions.</p>
+<img src="soil temperature moisture sensor.jpg" alt="Precision tools">
+
+<h2>5. Combine Harvesters</h2>
+<p>Machines that perform reaping, threshing, and winnowing.</p>
+<img src="combine harvestor.jpg" alt="Harvester">
+
+</main>
+
+<!-- ✅ FOOTER -->
+<footer>
+  <p>
+    © 2025 Farmers Info Hub |
+    Created by Shreyash Vibhute |
+    MIT License
+  </p>
+</footer>
+
+<!-- ✅ SCRIPT AT CORRECT PLACE -->
+<script src="search.js"></script>
+
 </body>
 </html>
