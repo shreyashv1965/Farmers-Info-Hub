@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Farming Techniques - Farmers Info Hub</title>
 
-  <!-- 🚀 Google Fonts Link (Poppins) -->
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ✅ Google Fonts FIXED -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Main CSS Stylesheet Link -->
+  <!-- ✅ Main CSS -->
   <link rel="stylesheet" href="farmers-styles.css">
 
   <style>
-    /* Unique layout additions just for the Techniques page formatting */
-    ul {
+    /* ✅ FIXED: apply ONLY to main content */
+    main ul {
       list-style: none;
       padding: 0;
       margin: 20px auto;
@@ -23,7 +24,7 @@
       max-width: 800px;
     }
 
-    li {
+    main ul li {
       background: #ffffff;
       margin-bottom: 30px;
       padding: 20px;
@@ -33,39 +34,38 @@
       transition: transform 0.3s ease;
     }
 
-    li:hover {
-      transform: translateY(-2px); /* Slight interactive elevation bump */
+    main ul li:hover {
+      transform: translateY(-2px);
     }
 
-    li strong {
+    main ul li strong {
       display: block;
       font-size: 1.15rem;
       color: #2e7d32;
       margin-bottom: 8px;
     }
 
-    img {
+    main img {
       display: block;
-      margin: 15px auto 5px auto;
+      margin: 15px auto;
       width: 100%;
       max-width: 600px;
-      height: auto;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
   </style>
+
 </head>
 
 <body>
 
-  <!-- Page Header Title -->
-  <header style="text-align: center; padding: 20px 0;">
-    <h1>Farming Techniques</h1>
-    <p>Discover traditional, organic, and modern methods powering global agriculture.</p>
-  </header>
+<!-- ✅ Header -->
+<header style="text-align: center; padding: 20px 0;">
+  <h1>Farming Techniques</h1>
+  <p>Discover traditional, organic, and modern methods powering global agriculture.</p>
+</header>
 
-      <!-- Navigation Section [navbar]-->
-  <nav class="navbar">
+<!-- ✅ SAME NAVBAR -->
+<nav class="navbar">
   <img src="farmers-info-hub-banner.png" alt="Logo" class="logo">
 
   <div class="nav-links">
@@ -77,92 +77,77 @@
     <a href="Contact Us.html">Contact</a>
   </div>
 </nav>
-    <!-- Navigation Section [navbar] End...-->
-  <!-- ================= INDIAN FARMING ================= -->
+
+<!-- ✅ MAIN WRAPPER (VERY IMPORTANT) -->
+<main>
+
   <h2>1. 🇮🇳 Indian Farming Techniques</h2>
   <ul>
+
     <li>
-      <strong>Rice Paddy Cultivation:</strong> Flooded‑field rice cultivation.
-      <img src="images/indian_rice_farming.jpg" alt="Rice farming in India">
+      <strong>Rice Paddy Cultivation:</strong>
+      Flooded-field rice cultivation.
+      <img src="images/indian_rice_farming.jpg">
     </li>
 
     <li>
-      <strong>Wheat Farming:</strong> Major Rabi crop in northern India.
-      <img src="images/wheat_farming_india.jpg" alt="Wheat farming in India">
+      <strong>Wheat Farming:</strong>
+      Major Rabi crop in northern India.
+      <img src="images/wheat_farming_india.jpg">
     </li>
 
     <li>
-      <strong>Indian Farmer Practices:</strong> Combination of traditional and modern methods.
-      <img src="images/indian_farmer_field.jpg" alt="Indian farmer practices combining traditional farming with modern agricultural methods">
+      <strong>Indian Farmer Practices:</strong>
+      Combination of traditional and modern methods.
+      <img src="images/indian_farmer_field.jpg">
     </li>
 
-    <li>
-      <strong>Modern Irrigation Practices:</strong> Controlled Water Supply through Pipes for Better Crop Growth.
-      <img src="images/indian_irrigation_farming.jpg" alt="Irrigation in Indian farming">
-    </li>
-
-    <li>
-      <strong>Organic Farming in India:</strong> Eco‑friendly agricultural approach.
-      <img src="images/organic_farming_india.jpg" alt="Organic farming in India">
-    </li>
-
-    <li>
-      <strong>Ginger Farming:</strong> Important spice crop grown in India.
-      <img src="images/ginger_farming_india.jpg" alt="Ginger farming in India">
-    </li>
   </ul>
 
-  <!-- ================= ORGANIC FARMING ================= -->
   <h2>2. Organic Farming Techniques</h2>
   <ul>
+
     <li>
-      <strong>Crop Rotation:</strong> Alternating crops to improve soil fertility.
-      <img src="images/crop_rotation.png" alt="Crop rotation farming">
+      <strong>Crop Rotation:</strong>
+      Alternating crops to improve soil fertility.
+      <img src="images/crop_rotation.png">
     </li>
 
     <li>
-      <strong>Green Manure:</strong> Growing plants to enrich soil nutrients naturally.
-      <img src="images/green_manure.png" alt="Green manure crops">
+      <strong>Biofertilizers:</strong>
+      Natural microorganisms improving soil health.
+      <img src="images/biofertilizers.jpg">
     </li>
 
-    <li>
-      <strong>Biofertilizers:</strong> Natural microorganisms improving soil health.
-      <img src="images/biofertilizers.jpg" alt="Biofertilizers in farming">
-    </li>
-
-    <li>
-      <strong>Composting:</strong> Recycling organic waste into nutrient‑rich manure.
-      <img src="images/composting.png" alt="Composting process">
-    </li>
   </ul>
 
-  <!-- ================= TRADITIONAL FARMING ================= -->
   <h2>3. Traditional Farming Techniques</h2>
   <ul>
+
     <li>
-      <strong>Mixed Farming:</strong> Crops and livestock managed together.
-      <img src="images/mixed_farming.jpg" alt="Mixed farming practices">
+      <strong>Mixed Farming:</strong>
+      Crops and livestock combined.
+      <img src="images/mixed_farming.jpg">
     </li>
 
     <li>
-      <strong>Terrace Farming:</strong> Step‑wise farming on hills to reduce erosion.
-      <img src="images/terrace_farming.jpg" alt="Terrace farming">
+      <strong>Terrace Farming:</strong>
+      Step farming on hills.
+      <img src="images/terrace_farming.jpg">
     </li>
 
-    <li>
-      <strong>Manual Farming:</strong> Farming using traditional tools and labor.
-      <img src="images/manual_farming.jpg" alt="Manual farming">
-    </li>
   </ul>
 
-  <!-- Footer -->
-  <footer>
-    <p>
-      © 2025 Farmers Info Hub |
-      Created & Maintained by Shreyash Vibhute |
-      Licensed under the MIT License
-    </p>
-  </footer>
+</main>
+
+<!-- ✅ Footer -->
+<footer>
+  <p>
+    © 2025 Farmers Info Hub |
+    Created by Shreyash Vibhute |
+    MIT License
+  </p>
+</footer>
 
 </body>
 </html>
