@@ -3,30 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farmers Info Hub - Explore Modern Agriculture</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="farmers-info-hub-banner.png">
+  <!-- ✅ SEO Title -->
+  <title>Farmers Info Hub | Modern Farming Techniques</title>
 
-  <!-- 🚀 Google Fonts Link (Poppins) -->
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Farmers Info Hub provides modern farming techniques, tools, sustainability, and agriculture knowledge to help farmers grow better.">
+  <meta name="keywords" content="farming, agriculture, modern farming, farming tools, sustainable farming, Indian farmers, agriculture project">
+  <meta name="author" content="Shreyash Vibhute">
 
-  <!-- Main CSS -->
+  <!-- ✅ Open Graph (for Google + Preview Image) -->
+  <meta property="og:title" content="Farmers Info Hub">
+  <meta property="og:description" content="Explore modern farming techniques, tools, and sustainable agriculture practices.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/shreyashv1965/Farmers-Info-Hub/main/farmers-info-hub-banner.png">
+  <meta property="og:url" content="https://shreyashv1965.github.io/Farmers-Info-Hub/">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="farmers-info-hub-banner.png">
+
+  <!-- ✅ Google Fonts (FIXED ✅) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Main CSS -->
   <link rel="stylesheet" href="farmers-styles.css">
-  
+
   <style>
-    /* Apply Poppins Font Globally and Enable Smooth Scrolling */
     * {
       font-family: 'Poppins', sans-serif;
     }
-    
+
     html {
       scroll-behavior: smooth;
     }
 
-    /* Search Section Styling */
     #search-section {
       text-align: center;
       margin: 40px 20px;
@@ -72,10 +84,6 @@
       border-bottom: 1px solid #e0e0e0;
     }
 
-    #suggestions li:last-child {
-      border-bottom: none;
-    }
-
     #suggestions li:hover {
       background: #ddd;
     }
@@ -107,13 +115,12 @@
 
 <body>
 
-  <!-- Header -->
   <header>
     <h1>Farmers Info Hub</h1>
     <p>Empowering farmers with sustainable and modern agriculture knowledge.</p>
   </header>
 
-  <!-- Navigation -->
+  <!-- ✅ Navigation -->
   <nav style="display:flex; align-items:center; gap:15px; padding:10px;">
     <img src="farmers-info-hub-banner.png" alt="Farmers Info Hub Logo" height="40">
     <a href="index.html">Home</a>
@@ -127,7 +134,7 @@
 
   <main>
 
-    <!-- ✅ SLIDESHOW SECTION -->
+    <!-- ✅ Slideshow -->
     <div class="slideshow-container">
 
       <div class="mySlides fade">
@@ -153,33 +160,23 @@
     <br>
 
     <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
 
-    <!-- ✅ SEARCH SECTION -->
+    <!-- ✅ Search -->
     <section id="search-section">
       <h2>Search Farmers Info Hub</h2>
 
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Search website..."
-      >
+      <input type="text" id="searchInput" placeholder="Search website...">
+      <button id="searchBtn">Search</button>
 
-      <button id="searchBtn">
-        Search
-      </button>
-
-      <!-- Suggestions Placeholder -->
       <ul id="suggestions"></ul>
-
-      <!-- Results Placeholder -->
       <div id="results"></div>
     </section>
 
-    <!-- Welcome Section -->
+    <!-- ✅ Welcome -->
     <section>
       <h2>Welcome</h2>
       <p>
@@ -190,12 +187,11 @@
 
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>
       © 2025 Farmers Info Hub |
-      Created & Maintained by Shreyash Vibhute |
-      Licensed under the MIT License
+      Created by Shreyash Vibhute |
+      Licensed under MIT
     </p>
   </footer>
 
@@ -205,29 +201,28 @@
     showSlides();
 
     function showSlides() {
-      let i;
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
 
-      for (i = 0; i < slides.length; i++) {
+      for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
 
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1; }
 
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
       }
 
       slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
+      dots[slideIndex - 1].classList.add("active");
 
       setTimeout(showSlides, 2000);
     }
   </script>
 
-  <!-- ✅ SEARCH SCRIPT -->
+  <!-- ✅ Search Script -->
   <script src="search.js"></script>
 
 </body>
