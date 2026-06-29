@@ -53,6 +53,8 @@ p {
 
 .logo {
   height: 40px;
+   width:auto;
+   max-width: 150px;
 }
 
 .nav-links {
@@ -74,6 +76,11 @@ p {
   background-color: #e8f5e9;
   color: #2e7d32;
   transform: translateY(-2px);
+}
+
+.navbar img {
+  display: block;
+   width:auto;
 }
 
 /* =====================
