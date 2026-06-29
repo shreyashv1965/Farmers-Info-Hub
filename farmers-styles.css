@@ -3,15 +3,15 @@
 ===================== */
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; /* 🚀 Upgraded to modern Google Font */
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
-  scroll-behavior: smooth; /* 💨 Enabled buttery smooth scrolling globally */
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #f8f9fa; /* Slightly softer modern white/grey */
+  background-color: #f8f9fa;
   margin: 0;
   padding: 0;
   color: #333333;
@@ -19,14 +19,14 @@ body {
 
 h1 {
   text-align: center;
-  color: #2e7d32; /* Rich Forest Green */
+  color: #2e7d32;
   margin-top: 30px;
   font-weight: 700;
 }
 
 h2 {
   text-align: center;
-  color: #2e7d32; /* Keeping headings cohesive */
+  color: #2e7d32;
   margin-top: 30px;
   font-weight: 600;
 }
@@ -39,97 +39,61 @@ p {
 }
 
 /* =====================
-   NAVIGATION (UPDATED UI)
+   ✅ NEW NAVBAR (FIXED)
 ===================== */
-nav {
+.navbar {
   width: 100%;
-  padding: 12px 0;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Clean border shadow drop */
-}
-
-nav ul {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Logo styling inside standard list flow */
-nav ul li img {
+.logo {
   height: 40px;
-  display: block;
 }
 
-/* Updated Links Style */
-nav ul li a {
-  display: block;
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #4a4a4a;
   font-weight: 500;
   font-size: 0.95rem;
-  padding: 8px 16px;
-  border-radius: 6px; /* Modern square-round finish */
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* Professional Agro Theme Hover Animation */
-nav ul li a:hover {
-  transform: translateY(-2px); /* Lift animation instead of rigid scaling */
-  background-color: #e8f5e9;   /* Soft organic green tint */
-  color: #2e7d32;              /* Forest green highlights */
-}
-
-/* =====================
-   SCROLL IMAGE GALLERY
-===================== */
-.scroll-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  white-space: nowrap;
-  padding: 15px;
-  gap: 15px;
-}
-
-.image-caption {
-  text-align: center;
-  background: #ffffff;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-.image-caption img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover; /* Keeps image ratios locked perfectly */
+  padding: 8px 14px;
   border-radius: 6px;
-  display: block;
-  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
-.image-caption p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #666666;
+.nav-links a:hover {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  transform: translateY(-2px);
 }
 
 /* =====================
-   SLIDESHOW (HOME)
+   LIST SECTION (SAFE FIX)
+===================== */
+main ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+}
+
+/* =====================
+   SLIDESHOW
 ===================== */
 .mySlides {
   display: none;
 }
 
 .slideshow-container {
-  max-width: 1000px; /* Centered bounding layout wrapper box */
-  position: relative;
+  max-width: 1000px;
   margin: 20px auto;
   border-radius: 12px;
   overflow: hidden;
@@ -137,24 +101,20 @@ nav ul li a:hover {
 }
 
 .text {
-  color: #ffffff;
-  font-size: 16px;
+  color: white;
   padding: 15px;
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7)); /* Overlay readability shading gradient */
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
 }
 
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
-  padding: 12px;
+  padding: 10px;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.3);
-  border-radius: 0 0 8px 0;
 }
 
 .dot {
@@ -164,97 +124,43 @@ nav ul li a:hover {
   background-color: #ccc;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
 }
 
 .active {
-  background-color: #2e7d32; /* Connected slide visual dot highlights */
-}
-
-.fade {
-  animation: fade 1.5s ease-in-out;
-}
-
-@keyframes fade {
-  from { opacity: 0.6; }
-  to { opacity: 1; }
+  background-color: #2e7d32;
 }
 
 /* =====================
-   CASE STUDY / CARDS
+   CARDS / CONTENT
 ===================== */
 .case-study {
   margin: 30px auto;
   padding: 25px;
   width: 85%;
   max-width: 800px;
-  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  background-color: #ffffff;
+  background: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.case-study:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* =====================
-   CONTACT PAGE & FORMS
+   FORM
 ===================== */
-.contact-section {
-  margin: 30px auto;
-  padding: 25px;
-  width: 85%;
-  max-width: 600px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
 form {
   margin: 20px auto;
-  text-align: center;
-  padding: 30px;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  background-color: #ffffff;
+  padding: 25px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  border-radius: 12px;
+  background: white;
 }
 
 form input,
 form textarea,
 form button {
-  margin: 12px 0;
-  padding: 12px;
+  margin: 10px 0;
+  padding: 10px;
   width: 100%;
-  font-size: 1rem;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
-  transition: border-color 0.3s;
-}
-
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: #2e7d32; /* Green input highlight focus focus borders */
-}
-
-form button {
-  background-color: #2e7d32;
-  color: #ffffff;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-form button:hover {
-  background-color: #1b5e20;
 }
 
 /* =====================
@@ -263,31 +169,8 @@ form button:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #1e251f; /* Elegant warm off-black matrix gray tint */
+  background-color: #1e251f;
   color: #aeaeae;
   font-size: 0.85rem;
   margin-top: 60px;
-}
-
-/* =====================
-   BACK TO TOP BUTTON
-===================== */
-#back-to-top {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: background-color 0.2s;
-}
-
-#back-to-top:hover {
-  background-color: #1b5e20;
 }
