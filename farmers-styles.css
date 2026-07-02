@@ -98,6 +98,7 @@ main ul {
 ===================== */
 .mySlides {
   display: none;
+   position: relative;
 }
 
 .slideshow-container {
